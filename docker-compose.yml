@@ -1,0 +1,45 @@
+version: '3'
+services:
+  api:
+    container_name: api
+    hostname: api
+    image: scram_board_api
+    build:
+      context: ./api
+    environment:
+      TZ: Asia/Tokyo
+      RAILS_ENV: development
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: password
+      DATABASE_DEVELOPMENT: development
+      DATABASE_PRODUCTION: production
+      DATABASE_HOSTNAME: db
+      LANG: C.UTF-8
+      LANGUAGE: en_US
+    volumes:
+      - ./api:/api
+      - ${GEMS_CACHE_DIR:-bundle}:/usr/local/bundle
+    tmpfs:
+      - /api/log:exec,mode=777,uid=1000,gid=1000
+      - /api/tmp:exec,mode=777,uid=1000,gid=1000
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    tty: true
+  db:
+    image: mysql:5.7
+    container_name: db
+    hostname: db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      TZ: Asia/Tokyo
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ../mycnf/init.d:/docker-entrypoint-initdb.d
+      - db:/var/lib/mysql
+volumes:
+  db:
+  bundle:
