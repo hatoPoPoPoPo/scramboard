@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react:
+    image: node:14.17.1-alpine
+    container_name: react
+    volumes:
+      - ./:/react
+    working_dir: /react
+    command: sh -c "PORT=3001 yarn start"
+    ports:
+      - "3001:3001"
+    stdin_open: true
