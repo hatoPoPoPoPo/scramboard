@@ -4,8 +4,8 @@ services:
     image: node:14.17.1-alpine
     container_name: react
     volumes:
-      - ./:/react
-    working_dir: /react
+      - ./:/src
+    working_dir: /src
     command: sh -c "PORT=3001 yarn start"
     ports:
       - "3001:3001"
