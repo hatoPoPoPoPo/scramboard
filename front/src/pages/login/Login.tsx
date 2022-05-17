@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./login.scss"
 
 const Login: React.FC = () => {
     return (
@@ -7,12 +8,10 @@ const Login: React.FC = () => {
         <div className="login">
           <h1>Scram Board</h1>
           <label>
-            メールアドレス
-            <input className="login__email" type="text" name="email" />
+            <input className="login_input" type="email" name="email" />
           </label>
           <label>
-            パスワード
-            <input className="login__password" type="text" name="password" />
+            <input className="login_input" type="password" name="password" />
           </label>
           <input type="submit" value="ログイン" />
           パスワードを忘れたユーザー

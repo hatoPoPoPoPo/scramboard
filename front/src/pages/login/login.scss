@@ -1,0 +1,10 @@
+@import "../stylesheets/common.scss";
+
+.login_input {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  border: $color-gray 1px solid;
+  padding: 2px 8px;
+  box-shadow: none;
+}
