@@ -1,42 +1,16 @@
-import * as React from "react";
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+import "./App.scss";
 
-function Home() {
+const App: React.FC = () => {
   return (
-      <div>
-        home pageです
-      </div>
-  );
-}
-
-function Profile() {
-  return (
-      <div>
-        profile pageです
-      </div>
-  );
-}
-
-function About() {
-  return (
-      <div>
-        about pageです
-      </div>
-  );
-}
-
-function App() {
-  return (
-      <div className="App">
-        <h1>Hello world!</h1>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="about" element={<About />} />
-        </Routes>
-      </div>
-  );
+    <Routes>
+      <Route path="home" element={<Home />} />
+      <Route path="*" element={<Login />} />
+    </Routes>
+  )
 }
 
 export default App;
