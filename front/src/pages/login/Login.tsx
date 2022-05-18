@@ -4,27 +4,30 @@ import "./login.scss"
 
 const Login: React.FC = () => {
     return (
-      <div>
-        <div className="login">
+      <div className="login">
+        <div className="login_form">
           <h1>Scram Board</h1>
+          <div className="login_form__email">
+            <input className="login_form__input" placeholder="メールアドレス" type="email" name="email" />
+          </div>
           <label>
-            <input className="login_input" type="email" name="email" />
+            <input className="login_form__input" placeholder="パスワード" type="password" name="password" />
           </label>
-          <label>
-            <input className="login_input" type="password" name="password" />
-          </label>
-          <input type="submit" value="ログイン" />
-          パスワードを忘れたユーザー
+          <div>
+            <button className="login_form__loginbutton">ログイン</button>
+            <div className="login_form__nopassword">
+              <p><span className="icon"></span>
+              パスワードを忘れた場合</p>
+            </div>
+          </div>
         </div>
 
-        <div>
-          アカウントを持っていないユーザー
-          新規登録
+        <div className="login_registuser">
+          <div className="login_noregist">アカウントを持っていない場合</div>
+          <button className="login_registuser__registbutton">新規登録</button>
         </div>
       </div>
     )
 }
-
-
 
 export default Login
