@@ -8,7 +8,7 @@ const Login: React.FC = () => {
       <div className="login">
         <div className="login_form">
           <h1>Scram Board</h1>
-          <div className="login_form__email">
+          <div>
             <input className="login_form__input" placeholder="メールアドレス" type="email" name="email" />
           </div>
           <label>
@@ -16,11 +16,9 @@ const Login: React.FC = () => {
           </label>
           <div>
             <button className="login_form__loginbutton">ログイン</button>
-            <div className="login_form__nopassword">
-              <p><span className="icon"></span>
-              パスワードを忘れた場合</p>
-              <span className="icon-warning"></span>
-            </div>
+          </div>
+          <div className="login_form__nopassword">
+             パスワードを忘れた場合
           </div>
         </div>
 
