@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "../stylesheets/icomoon/style.css"
 import "./login.scss"
 
 const Login: React.FC = () => {
@@ -18,6 +19,7 @@ const Login: React.FC = () => {
             <div className="login_form__nopassword">
               <p><span className="icon"></span>
               パスワードを忘れた場合</p>
+              <span className="icon-warning"></span>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ahip10');
-  src:  url('fonts/icomoon.eot?ahip10#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ahip10') format('truetype'),
-    url('fonts/icomoon.woff?ahip10') format('woff'),
-    url('fonts/icomoon.svg?ahip10#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?dwkaza');
+  src:  url('fonts/icomoon.eot?dwkaza#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dwkaza') format('truetype'),
+    url('fonts/icomoon.woff?dwkaza') format('woff'),
+    url('fonts/icomoon.svg?dwkaza#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,21 +27,16 @@
 
 .icon-warning:before {
   content: "\e902";
-  color: #4b4b4b;
 }
 .icon-question:before {
   content: "\e903";
-  color: #4b4b4b;
 }
 .icon-login:before {
   content: "\e904";
-  color: #4b4b4b;
 }
 .icon-key:before {
   content: "\e900";
-  color: #bfbfbf;
 }
 .icon-email:before {
   content: "\e901";
-  color: #bfbfbf;
 }
