@@ -1,9 +1,8 @@
 @import "../stylesheets/common.scss";
 
-h1 {
+h1.login__h1 {
   font-size: 38px;
   margin: 52px;
-  font-weight: 900;
 }
 
 ::placeholder {
@@ -39,8 +38,8 @@ h1 {
   margin: 60px;
 }
 
-.login_form__nopassword:before { 
-  font-family: "icomoon"; 
+.login_form__nopassword:before {
+  font-family: "icomoon";
   content: "\e903";
   padding-right: 4px;
 }
@@ -53,6 +52,7 @@ h1 {
   padding-top: 32px;
   padding-bottom: 32px;
   margin-top: 32px;
+  margin-bottom: 64px;
 }
 
 .login_registuser__registbutton {
@@ -67,7 +67,7 @@ h1 {
 }
 
 button.login_form__loginbutton:before {
-  font-family: "icomoon"; 
+  font-family: "icomoon";
   content: "\e904";
   padding-right: 4px;
 }

@@ -7,7 +7,7 @@ const Login: React.FC = () => {
     return (
       <div className="login">
         <div className="login_form">
-          <h1>Scram Board</h1>
+          <h1 className="login__h1">Scram Board</h1>
           <div>
             <input className="login_form__input" placeholder="メールアドレス" type="email" name="email" />
           </div>
